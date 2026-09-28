@@ -28,5 +28,18 @@ public class Counter {
                 .filter(n -> n % 2 == 0)
                 .count(); 
 	}
+	
+	public int multiplos(int x, int y)
+	{
+		int retorno = -1;
+		for (int i = 1000; i > 0 ; i--)
+		{
+			if(i%x == 0 && i%y == 0)
+			{
+				return i;
+			}
+			
+		}
+		return retorno;
+	}
 }
-

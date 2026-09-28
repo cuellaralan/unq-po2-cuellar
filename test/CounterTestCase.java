@@ -41,4 +41,14 @@ public class CounterTestCase
 		// I check the amount is the expected one
 		assertEquals(amount, 1);
 	}
+@Test
+//multiplo existe
+	public void testMultiploDe3y9()
+	{
+		int result = counter.multiplos(3, 9);
+		assertEquals(result, 999);
+	}
+
 }
+
+
