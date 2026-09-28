@@ -42,4 +42,38 @@ public class Counter {
 		}
 		return retorno;
 	}
+	/*● Foreach
+		int[] arregloDeEnteros = new int[]{1,2,3};
+		int suma = 0;
+		for (int entero:arregloDeEnteros ) {
+		suma=+entero;
+		}
+		System.out.println(("El valor de la suma es es " + suma);
+*/
+
+	public int mayorConPares(ArrayList<Integer> numeros)
+	{
+		int mayor = 1;
+		int paresMayor = 0;
+		for(int entero : numeros)
+		{
+			int aux = entero;
+			int auxPares = 0;
+			while(aux > 0)
+			{
+				int digito = aux % 10;
+				if(digito%2 == 0)
+				{
+					auxPares+=1;
+				}
+				aux = aux / 10;
+			}
+			if(auxPares > paresMayor)
+			{
+				paresMayor = auxPares;
+				mayor = entero;
+			}
+		}
+		return mayor;
+	}
 }

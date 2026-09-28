@@ -2,6 +2,7 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import ar.edu.unq.po2.tp3.*;
+import java.util.ArrayList;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -48,6 +49,19 @@ public class CounterTestCase
 		int result = counter.multiplos(3, 9);
 		assertEquals(result, 999);
 	}
+
+
+@Test
+	public void testMayor4Pares()
+	{
+	 ArrayList<Integer> numeros = new ArrayList<Integer>();
+	    numeros.add(5394128); // tiene 3 pares
+	    numeros.add(2468);    // tiene 4 pares
+	    numeros.add(13579);   // tiene 0 pares
+	    int resultado = counter.mayorConPares(numeros);
+	    assertEquals(resultado, 2468);
+	}
+
 
 }
 
