@@ -42,14 +42,19 @@ public class Counter {
 		}
 		return retorno;
 	}
-	/*● Foreach
-		int[] arregloDeEnteros = new int[]{1,2,3};
-		int suma = 0;
-		for (int entero:arregloDeEnteros ) {
-		suma=+entero;
-		}
-		System.out.println(("El valor de la suma es es " + suma);
-*/
+	
+	public int getOddOcurrences()
+	{
+		return this.contador.size() - this.getEvenOcurrences();
+	}
+	
+
+	public int getMultiplesFor(int x)
+	{
+		return (int) this.contador.stream()
+                .filter(n -> n % x == 0)
+                .count(); 
+	}
 
 	public int mayorConPares(ArrayList<Integer> numeros)
 	{

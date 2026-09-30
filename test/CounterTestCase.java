@@ -43,6 +43,32 @@ public class CounterTestCase
 		assertEquals(amount, 1);
 	}
 @Test
+//cantidad de impares
+	public void testOddNumbers() 
+	{
+		// Getting the odd occurrences
+		int amount = counter.getOddOcurrences();
+		// I check the amount is the expected one
+		assertEquals(amount, 9);
+	}
+@Test
+//multiplos de 3 en  arraylist
+	public void testMultiplesOf3()
+	{
+		int result = counter.getMultiplesFor(3);
+		assertEquals(result, 2);
+	}	
+
+@Test
+//multiplos de 2 en  arraylist
+	public void testMultiplesOf2()
+	{
+		int result = counter.getMultiplesFor(2);
+		assertEquals(result, 1);
+	}	
+
+
+@Test
 //multiplo existe
 	public void testMultiploDe3y9()
 	{
